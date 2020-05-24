@@ -1,0 +1,265 @@
+<!--
+  ~ Copyright 2020 RRsaikat. All rights reserved.
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dayStatusLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvDayNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Week X"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvDateRange"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDateRange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="end"
+            tools:text="XX XXX, XXXX - XX XXX, XXXX"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvDayNo"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.rezwan.rcalenderlib.views.YearRangeCalendarView
+        android:id="@+id/yearRangeDayCalendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dayStatusLayout"
+        app:month_name_maxlength="two"
+        app:date_start_name="Wednesday"
+        app:highlight_today_at_startup="true"
+        app:sticky_date="false"
+        app:calendar_style="dark"
+        app:show_month="true"
+        app:calendar_mode="day"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/controllayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yearRangeDayCalendarView">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/navigationlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/btnPrev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_rrow_left_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnNext"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_arrow_right_black"
+                app:layout_constraintBottom_toBottomOf="@+id/btnPrev"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnPrev"
+                app:layout_constraintTop_toTopOf="@+id/btnPrev" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/actionlayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/navigationlayout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/actionStatusLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="@+id/actionLablesLayout"
+                app:layout_constraintEnd_toStartOf="@+id/actionLablesLayout"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/actionLablesLayout"
+                android:background="#F5F5F5"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/tvDate_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="12"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/tvDate_2"
+                    app:layout_constraintEnd_toEndOf="@+id/tvDate_2"
+                    app:layout_constraintStart_toStartOf="@+id/tvDate_2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDate_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    tools:text="April, Wednesday\n2020"
+                    android:lineSpacingExtra="6dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#333232"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDate_1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/actionLablesLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/actionStatusLayout">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGotoStart"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GoTo > Start"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:textColor="@color/colorAccent"
+                    app:cornerRadius="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/btnGotoEnd"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGotoEnd"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GoTo > End"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:textColor="@color/colorAccent"
+                    app:cornerRadius="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/btnToday"
+                    app:layout_constraintStart_toStartOf="@+id/btnGotoStart"
+                    app:layout_constraintTop_toBottomOf="@+id/btnGotoStart" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnToday"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:textColor="@color/colorAccent"
+                    app:cornerRadius="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/btnGotoDay"
+                    app:layout_constraintStart_toStartOf="@+id/btnGotoEnd"
+                    app:layout_constraintTop_toBottomOf="@+id/btnGotoEnd" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGotoDay"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Day No > 20"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:textColor="@color/colorAccent"
+                    app:cornerRadius="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/GotoDateLayout"
+                    app:layout_constraintStart_toStartOf="@+id/btnToday"
+                    app:layout_constraintTop_toBottomOf="@+id/btnToday" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/GotoDateLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/btnGotoDay"
+                    app:layout_constraintTop_toBottomOf="@+id/btnGotoDay">
+
+                    <Button
+                        android:id="@+id/btnGotoDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Go"
+                        app:layout_constraintBottom_toBottomOf="@+id/edtDate"
+                        app:layout_constraintEnd_toEndOf="@+id/edtDate"
+                        app:layout_constraintEnd_toStartOf="@+id/edtDate"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/edtDate"
+                        app:layout_constraintTop_toTopOf="@+id/edtDate" />
+
+                    <EditText
+                        android:id="@+id/edtDate"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:ems="10"
+                        android:hint="YYYY-MM-DD"
+                        android:inputType="date"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/btnGotoDate"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
