@@ -1,4 +1,5 @@
-"# RCalendar" 
+# RCalendar
+An android package that provides horizontal date picker as week and day mode.
 
 Copyright 2020 RRsaikat. All rights reserved.
 Licensed under the Apache License, Version 2.0 (the "License");
