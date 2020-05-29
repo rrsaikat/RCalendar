@@ -18,7 +18,10 @@ Have to enable Kotlin and AndroidX, because this project only works into this co
 
 STEP 1:  Download rcalenderlib_vX.X.X.aar from here:    
 
-[![Download](https://play.google.com/intl/en_us/badges/images/badge_new.png)](https://play.google.com/store/apps/details?id=com.rezwan.rcalendar)
+<a href="https://github.com/rrsaikat/RCalendar/raw/master/app/libs/rcalenderlib_v2.5.0.aar" title="Download">
+    <img alt="Download" src="https://img.pngio.com/free-icon-download-png-182575-download-icon-download-png-182575-icon-png-download-600_400.jpg">
+</a>
+
 
 STEP 2:
         
