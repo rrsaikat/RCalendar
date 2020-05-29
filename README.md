@@ -23,7 +23,10 @@ STEP 1:  Download rcalenderlib_vX.X.X.aar from here:
 </a>
 
 
-STEP 2:
+STEP 2: Put the downloaded lbrary file into libs folder likem this:
+
+<img src="https://github.com/rrsaikat/RCalendar/blob/master/app/lib_example.png" height="200" width="220"/>
+
         
    nb: Don't forget to navigate the library into projects build.gradle:
         
