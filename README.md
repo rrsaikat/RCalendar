@@ -7,24 +7,20 @@ An android package that provides horizontal date picker as week and day mode wit
   <img src="https://github.com/rrsaikat/RCalendar/blob/master/app/GIF-200526_171721.gif" height="450" width="220"/>
 </p>
 
+Demo App:
+
+[![Get it on Google Play](https://play.google.com/intl/en_us/badges/images/badge_new.png)](https://play.google.com/store/apps/details?id=com.rezwan.rcalendar)
+
 
 Usage Guide
 -----------------
+Have to enable Kotlin and AndroidX, because this project only works into this configuration and not available for java.
 
 STEP 1:  Download rcalenderlib_vX.X.X.aar from here:    
 
-      
-        
-STEP 2: Reference the library itself in your module-level build.gradle:      
+[![Download](https://play.google.com/intl/en_us/badges/images/badge_new.png)](https://play.google.com/store/apps/details?id=com.rezwan.rcalendar)
 
-        api(name: 'rcalenderlib_v2.5.0', ext: 'aar')
-
-STEP 3: Add more required libraries into your module-level build.gradle:
-
-        implementation 'com.google.android.material:material:1.1.0'
-        implementation 'joda-time:joda-time:2.10.1'
-        
-STEP 4:
+STEP 2:
         
    nb: Don't forget to navigate the library into projects build.gradle:
         
@@ -36,12 +32,17 @@ STEP 4:
                         dirs 'libs'
                       }
                   }
-              }
+              }      
+        
+STEP 3: Reference the library itself in your module-level build.gradle:      
 
-                       
-                    
-## NOTE:
-1. Enable Kotlin and AndroidX
+        api(name: 'rcalenderlib_v2.5.0', ext: 'aar')
+
+STEP 4: Add more required libraries into your module-level build.gradle:
+
+        implementation 'com.google.android.material:material:1.1.0'
+        implementation 'joda-time:joda-time:2.10.1'
+        
 
 STEP 5: Finally sync and build.
 
@@ -67,9 +68,6 @@ In XML :
               app:calendar_mode="week"/>
               
               
-Method Declarations
------------------
-
 
 ## Available xml functions:
 
@@ -145,9 +143,6 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 [GO TO Tutorial](https://www.youtube.com/watch?v=v55QLdqhwKQ)
         
-Demo App:
-
-[![Get it on Google Play](https://play.google.com/intl/en_us/badges/images/badge_new.png)](https://play.google.com/store/apps/details?id=com.rezwan.rcalendar)
 
 ## Author
 
