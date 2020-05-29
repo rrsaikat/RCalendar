@@ -57,6 +57,24 @@ Available additinal methods:
     *  navigateToday()
     *  navigateToPage(pageNumber: Int)
     *  gotoDate(date:LocalDate)
+    
+    *  setYearRangeListener(this) - a listener which overrides two methods :
+    
+             override fun OnDateClicked(rCalendar: RCalendar, position: Int) {
+             
+             }
+            
+            override fun OnSelectedDateFound(
+                rCalendar: RCalendar,
+                firstDayOfWeek: LocalDate,
+                lastDayOfWeek: LocalDate,
+                dayPosition: Int,
+                currentPageNum: Int,
+                weekOfWeekYear: Int) {
+
+              }
+            
+            
 
 Example project is here for better understanding: 
 
