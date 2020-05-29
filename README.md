@@ -57,7 +57,10 @@ Available additinal methods:
     *  setViewGroupResId() - targeted viewgroup to show network status views.
 
 Example project is here for better understanding: 
-[GO TO Example](https://github.com/rrsaikat/RNetwork/blob/master/app/src/main/java/com/rezwan/example/MainActivity.kt)
+
+[GO TO WeekView Example](https://github.com/rrsaikat/RCalendar/blob/master/app/src/main/java/com/rezwan/rcalendar/ui/fragments/WeekFragment.kt)
+
+[GO TO DayView Example](https://github.com/rrsaikat/RCalendar/blob/master/app/src/main/java/com/rezwan/rcalendar/ui/fragments/DayFragment.kt)
 
 Video Sample (Installaion or setup)
 ------------------
