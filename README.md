@@ -50,11 +50,13 @@ STEP 5: Finally sync and build.
 Available additinal methods:
 -----------------
 
-    *  showKNDialog() - set true for show dialog when net connection goes off.
-    *  setConnectivityListener() - connected, disconnected callback into activity
-    *  setInAnimation() - custom animation setup
-    *  setOutAnimation() - custom animation setup
-    *  setViewGroupResId() - targeted viewgroup to show network status views.
+    *  navigateToPrevious()
+    *  navigateToNext()
+    *  navigateToStart()
+    *  navigateToEnd()
+    *  navigateToday()
+    *  navigateToPage(pageNumber: Int)
+    *  gotoDate(date:LocalDate)
 
 Example project is here for better understanding: 
 
