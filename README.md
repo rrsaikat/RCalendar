@@ -47,8 +47,51 @@ STEP 5: Finally sync and build.
 
 
 
-Available additinal methods:
+Usage Example
 -----------------
+
+In XML :
+
+      <com.rezwan.rcalenderlib.views.YearRangeCalendarView
+              android:id="@+id/yearRangeCalendarView"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:month_name_maxlength="two"
+              app:date_start_name="Wednesday"
+              app:highlight_today_at_startup="true"
+              app:sticky_date="false"
+              app:calendar_style="light"
+              app:show_month="false"
+              app:start_year="2020"
+              app:end_year="2021"
+              app:calendar_mode="week"/>
+              
+              
+Method Declarations
+-----------------
+
+
+## Available xml functions:
+
+              app:month_name_maxlength="two"
+              app:date_start_name="Wednesday" -
+              app:highlight_today_at_startup="true" - highlights date of today at startup (deafult value is false)
+              app:calendar_style="light" - deafult is dark
+              app:show_month="false" - hide/show text of months
+              app:start_year="2020" - should be smaller than end year (default is current year)
+              app:end_year="2021" - should be bigger than start year (default is current year)
+              app:calendar_mode="week" - day or week(deafult is week)
+              app:sticky_date="false" - only available for week view and its tracks your previous selected date position if its true                                             (deafult value is false)
+
+
+## Available kotlin functions:
+
+
+
+
+
+
+## Available additinal methods:
 
     *  navigateToPrevious()
     *  navigateToNext()
@@ -76,7 +119,8 @@ Available additinal methods:
             
             
 
-Example project is here for better understanding: 
+
+Project example is here for better understanding: 
 
 [GO TO WeekView Example](https://github.com/rrsaikat/RCalendar/blob/master/app/src/main/java/com/rezwan/rcalendar/ui/fragments/WeekFragment.kt)
 
