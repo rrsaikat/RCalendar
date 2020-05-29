@@ -73,22 +73,22 @@ Method Declarations
 
 ## Available xml functions:
 
-              app:month_name_maxlength="two"
-              app:date_start_name="Wednesday" -
+              app:month_name_maxlength="two" - default is two 
+              app:date_start_name="Wednesday" - its the starting day of starting year ( remove this line if you want default starting day of starting year)
               app:highlight_today_at_startup="true" - highlights date of today at startup (deafult value is false)
               app:calendar_style="light" - deafult is dark
               app:show_month="false" - hide/show text of months
               app:start_year="2020" - should be smaller than end year (default is current year)
               app:end_year="2021" - should be bigger than start year (default is current year)
               app:calendar_mode="week" - day or week(deafult is week)
-              app:sticky_date="false" - only available for week view and its tracks your previous selected date position if its true                                             (deafult value is false)
+              app:sticky_date="false" - only available for week view and its tracks your previous selected date position if its true(deafult value is false)                                             
 
 
-## Available kotlin functions:
+# Above functions can also be applied from code:
 
-
-
-
+              setYearRange(startYear: Int, endYear: Int)
+              setMonthTextLength(textLength: Int)
+              setIsDateSticky(isSticky: Boolean)
 
 
 ## Available additinal methods:
@@ -100,6 +100,17 @@ Method Declarations
     *  navigateToday()
     *  navigateToPage(pageNumber: Int)
     *  gotoDate(date:LocalDate)
+    *  currentFirtDayOfWeek()
+    *  currentLastDayOfWeek()
+    *  getIsDateSticky()
+    *  getTotalDays()
+    *  getTotalWeeks()
+    *  getCurrentPagePos()
+    *  getStartYear()
+    *  getEndYear()
+    *  getStartDate()
+    *  getEndDate()
+    *  today()
     
     *  setYearRangeListener(this) - a listener which overrides two methods :
     
