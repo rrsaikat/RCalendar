@@ -56,7 +56,7 @@ class DayFragment : Fragment(), YearRangeListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        yearRangeDayCalendarView.addToLifecycle(lifecycle, savedInstanceState)
+//        yearRangeDayCalendarView.addToLifecycle(lifecycle, savedInstanceState)
         btnPrev.setOnClickListener {
             yearRangeDayCalendarView.navigateToPrevious()
         }
@@ -84,8 +84,7 @@ class DayFragment : Fragment(), YearRangeListener {
             try {
                 hideKeyboard()
                 edtDate?.text.let {
-                    val ldate = LocalDate.parse(it.toString())
-                    yearRangeDayCalendarView.gotoDate(ldate)
+                    yearRangeDayCalendarView.gotoDate(it.toString())
                 }
             } catch (ex: Exception) {
                 Toast.makeText(context, ex.localizedMessage, Toast.LENGTH_SHORT).show()
@@ -95,17 +94,23 @@ class DayFragment : Fragment(), YearRangeListener {
         yearRangeDayCalendarView.setYearRangeListener(this)
     }
 
+    companion object {
+        @JvmStatic
+        fun newInstance(): DayFragment {
+            return DayFragment()
+        }
+    }
+
     override fun OnDateClicked(rCalendar: RCalendar, position: Int) {
         error(this, "OnDateClicked  ${rCalendar.date}")
     }
 
     override fun OnSelectedDateFound(
         rCalendar: RCalendar,
-        firstDayOfWeek: LocalDate,
-        lastDayOfWeek: LocalDate,
+        firstDayOfWeek: String,
+        lastDayOfWeek: String,
         dayPosition: Int,
-        currentPageNum: Int,
-        weekOfWeekYear: Int
+        currentPageNum: Int
     ) {
         error(this, "OnSelectedDateFound  ${rCalendar.date}")
         yearRangeDayCalendarView?.post {
@@ -118,12 +123,4 @@ class DayFragment : Fragment(), YearRangeListener {
 
         }
     }
-
-    companion object {
-        @JvmStatic
-        fun newInstance(): DayFragment {
-            return DayFragment()
-        }
-    }
-
 }

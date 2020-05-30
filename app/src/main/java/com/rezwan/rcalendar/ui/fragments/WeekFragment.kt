@@ -41,11 +41,12 @@ class WeekFragment : Fragment(), YearRangeListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        yearRangeWeekCalendarView.addToLifecycle(lifecycle, savedInstanceState)
+//        yearRangeWeekCalendarView.addToLifecycle(lifecycle, savedInstanceState)
         sticky_switch.isChecked = yearRangeWeekCalendarView.getIsDateSticky()
         sticky_switch.setOnCheckedChangeListener { buttonView, isChecked ->
             yearRangeWeekCalendarView.setIsDateSticky(isChecked)
         }
+
         btnPrev.setOnClickListener {
             yearRangeWeekCalendarView.navigateToPrevious()
         }
@@ -73,8 +74,7 @@ class WeekFragment : Fragment(), YearRangeListener {
             try {
                 hideKeyboard()
                 edtDate?.text.let {
-                    val ldate = LocalDate.parse(it.toString())
-                    yearRangeWeekCalendarView.gotoDate(ldate)
+                    yearRangeWeekCalendarView.gotoDate(it.toString())
                 }
             } catch (ex: Exception) {
                 Toast.makeText(context, ex.localizedMessage, Toast.LENGTH_SHORT).show()
@@ -84,17 +84,24 @@ class WeekFragment : Fragment(), YearRangeListener {
         yearRangeWeekCalendarView.setYearRangeListener(this)
     }
 
+
+    companion object {
+        @JvmStatic
+        fun newInstance(): WeekFragment {
+            return WeekFragment()
+        }
+    }
+
     override fun OnDateClicked(rCalendar: RCalendar, position: Int) {
         error(this, "OnDateClicked  ${rCalendar.date}")
     }
 
     override fun OnSelectedDateFound(
         rCalendar: RCalendar,
-        firstDayOfWeek: LocalDate,
-        lastDayOfWeek: LocalDate,
+        firstDayOfWeek: String,
+        lastDayOfWeek: String,
         dayPosition: Int,
-        currentPageNum: Int,
-        weekOfWeekYear: Int
+        currentPageNum: Int
     ) {
         error(this, "OnSelectedDateFound  ${rCalendar.date}")
         yearRangeWeekCalendarView?.post {
@@ -119,13 +126,6 @@ class WeekFragment : Fragment(), YearRangeListener {
 
                 }
             }
-        }
-    }
-
-    companion object {
-        @JvmStatic
-        fun newInstance(): WeekFragment {
-            return WeekFragment()
         }
     }
 }

@@ -49,6 +49,6 @@ dependencies {
 
     implementation 'com.google.android.material:material:1.1.0'
     implementation 'joda-time:joda-time:2.10.1'
-    api(name: 'rcalenderlib_v2.5.0', ext: 'aar')
+    api(name: 'rcalenderlib_v2.6.0', ext: 'aar')
     //implementation project(":rcalenderlib_v1.1.0")
 }
