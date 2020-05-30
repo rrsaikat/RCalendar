@@ -1,10 +1,10 @@
 # RCalendar
-![Feature Image](https://github.com/rrsaikat/RCalendar/blob/master/app/banner.png)
+![Feature Image](https://blog.rrsaikat.com/wp-content/uploads/2020/05/banner.png)
 
 An android package that provides horizontal date picker as week and day mode within a given range of year.
 <p align="start">
-  <img src="https://github.com/rrsaikat/RCalendar/blob/master/app/GIF-200526_172126.gif" height="450" width="220"/>
-  <img src="https://github.com/rrsaikat/RCalendar/blob/master/app/GIF-200526_171721.gif" height="450" width="220"/>
+  <img src="https://blog.rrsaikat.com/wp-content/uploads/2020/05/GIF-200526_172126.gif" height="450" width="220"/>
+  <img src="https://blog.rrsaikat.com/wp-content/uploads/2020/05/GIF-200526_171721.gif" height="450" width="220"/>
 </p>
 
 Demo App:
@@ -25,7 +25,7 @@ STEP 1:  Download rcalenderlib_vX.X.X.aar from here:
 
 STEP 2: Put the downloaded library file into libs folder like this:
 
-<img src="https://github.com/rrsaikat/RCalendar/blob/master/app/lib_example.png" height="200" width="220"/>
+<img src="https://blog.rrsaikat.com/wp-content/uploads/2020/05/lib_example.png" height="200" width="220"/>
 
         
    nb: Don't forget to navigate the library into projects build.gradle:
