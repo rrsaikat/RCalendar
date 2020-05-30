@@ -7,6 +7,9 @@ An android package that provides horizontal date picker as week and day mode wit
 <p align="start">
   <img src="https://github.com/rrsaikat/RCalendar/blob/master/app/GIF-200526_172126.gif" alt="" width="237" height="458""/>
   <img src="https://github.com/rrsaikat/RCalendar/blob/master/app/GIF-200526_171721.gif"" alt="" width="237" height="458"/>
+</p>
+
+<p align="start">
   <img src="https://blog.rrsaikat.com/wp-content/uploads/2020/05/GIF-200526_172126.gif" width="237" height="458"/>
   <img src="https://blog.rrsaikat.com/wp-content/uploads/2020/05/GIF-200526_171721.gif" width="237" height="458"/>
 </p>
