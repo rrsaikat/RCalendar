@@ -73,6 +73,25 @@ In XML :
               app:end_year="2021"
               app:calendar_mode="week"/>
               
+
+
+In Activity/Fragment:
+
+              yearRangeCalendarView.setYearRangeListener(this)
+                   override fun OnDateClicked(rCalendar: RCalendar, position: Int) {
+
+                   }
+
+                   override fun OnSelectedDateFound(
+                        rCalendar: RCalendar,
+                        firstDayOfWeek: String,
+                        lastDayOfWeek: String,
+                        dayPosition: Int,
+                        currentPageNum: Int) {
+
+                      }
+            
+              
               
 
 ## Available xml functions:
@@ -88,7 +107,7 @@ In XML :
               app:sticky_date="false" - only available for week view and its tracks your previous selected date position if its true(deafult value is false)                                             
 
 
-# Above functions can also be applied from code:
+#### Above functions can also be applied from code:
 
               setYearRange(startYear: Int, endYear: Int)
               setMonthTextLength(textLength: Int)
@@ -116,22 +135,7 @@ In XML :
     *  getEndDate()
     *  today()
     
-    *  setYearRangeListener(this) - a listener which overrides two methods :
-    
-             override fun OnDateClicked(rCalendar: RCalendar, position: Int) {
-             
-             }
-            
-            override fun OnSelectedDateFound(
-                rCalendar: RCalendar,
-                firstDayOfWeek: LocalDate,
-                lastDayOfWeek: LocalDate,
-                dayPosition: Int,
-                currentPageNum: Int,
-                weekOfWeekYear: Int) {
-
-              }
-            
+   
             
 
 
