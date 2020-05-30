@@ -4,7 +4,7 @@
 An android package that provides horizontal date picker as week and day mode within a given range of year. This library extends Recyclerview and JodaTime. Feel free to use it all you want in your Android apps provided that you cite this project and include the license in your app.
 
 <p align="start">
-  <img src="https://blog.rrsaikat.com/wp-content/uploads/2020/05/GIF-200526_172126.gif" height="450" width="220"/>
+  <img src="https://github.com/rrsaikat/RCalendar/blob/master/app/GIF-200526_171721.gif" height="450" width="220"/>
   <img src="https://blog.rrsaikat.com/wp-content/uploads/2020/05/GIF-200526_171721.gif" height="450" width="220"/>
 </p>
 
