@@ -154,11 +154,10 @@ Project example is here for better understanding:
 
 Video Sample (Installaion or setup)
 ------------------
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=v55QLdqhwKQ
-" target="_blank"><img src="http://img.youtube.com/vi/v55QLdqhwKQ/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+<a href="https://www.youtube.com/watch?v=AN_V5__3VNc" target="_blank"><img src="https://i9.ytimg.com/vi/AN_V5__3VNc/mqdefault.jpg?time=1590996101058&sqp=CKDY0vYF&rs=AOn4CLBUx9efwZdWln0UkXlE9ECo8PZ_lg" 
+alt="" border="10" /></a>
 
-[GO TO Tutorial](https://www.youtube.com/watch?v=v55QLdqhwKQ)
+[GO TO Tutorial](https://www.youtube.com/watch?v=AN_V5__3VNc)
         
 
 ## Author
