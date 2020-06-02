@@ -99,51 +99,45 @@ In Activity/Fragment:
                       }
             
               
-              
 
-## Available xml functions:
+#### Methods
+Methods | Return | Description
+--- | --- | ---
+setYearRange(startYear: Int, endYear: Int) | void | set the start and end year.
+setMonthTextLength(textLength: Int) | void | set the text length of month.
+setIsDateSticky(isSticky: Boolean) | void | tracks your previous selected date position.
+navigateToPrevious() | void | go to previous week/day .
+navigateToNext() | void | go to next week/day.
+navigateToday() | void | highlight or go to at today's date position.
+navigateToStart() | void | go to starting week/day.
+navigateToEnd() | void | go to ending week/day.
+navigateToPage(pageNumber: Int) | void | go to specific week/day position.
+gotoDate(date:LocalDate) | void | go to specific date in between the year range.
+currentFirtDayOfWeek() | String | get current first day of visible week/day.
+currentLastDayOfWeek() | String | get current last day of visible week/day.
+getIsDateSticky() | boolean | get if selected date will remains sticky or not.
+getTotalDays() | Int | get total number of days(start year ~ end year).
+getTotalWeeks() | Int | get total number of weeks.
+getCurrentPagePos() | Int | get current visible position of week/day.
+getStartYear() | Int | get starting year.
+getEndYear() | Int | get ending year.
+getStartDate() | LocalDate | get first day from the year range.
+getEndDate() | LocalDate | get last day from the year range.
+today() | LocalDate | get today's date
 
-              app:month_name_maxlength="two" - default is two 
-              app:date_start_name="Wednesday" - its the starting day of starting year ( remove this line if you want default starting day of starting year)
-              app:highlight_today_at_startup="true" - highlights date of today at startup (deafult value is false)
-              app:calendar_style="light" - deafult is dark
-              app:show_month="false" - hide/show text of months
-              app:start_year="2020" - should be smaller than end year (default is current year)
-              app:end_year="2021" - should be bigger than start year (default is current year)
-              app:calendar_mode="week" - day or week(deafult is week)
-              app:sticky_date="false" - only available for week view and its tracks your previous selected date position if its true(deafult value is false)                                             
-
-
-#### Above functions can also be applied from code:
-
-              setYearRange(startYear: Int, endYear: Int)
-              setMonthTextLength(textLength: Int)
-              setIsDateSticky(isSticky: Boolean)
-
-
-## Available additinal methods:
-
-    *  navigateToPrevious()
-    *  navigateToNext()
-    *  navigateToStart()
-    *  navigateToEnd()
-    *  navigateToday()
-    *  navigateToPage(pageNumber: Int)
-    *  gotoDate(date:LocalDate)
-    *  currentFirtDayOfWeek()
-    *  currentLastDayOfWeek()
-    *  getIsDateSticky()
-    *  getTotalDays()
-    *  getTotalWeeks()
-    *  getCurrentPagePos()
-    *  getStartYear()
-    *  getEndYear()
-    *  getStartDate()
-    *  getEndDate()
-    *  today()
-    
-   
-            
+#### Attributes
+Attributes | Default | Description
+--- | --- | ---
+month_name_maxlength | two | set the month text length.
+date_start_name | starting day of starting year | customize the starting day of starting year.
+highlight_today_at_startup | false | highlights date of today at startup.
+calendar_style | dark | available styles are dark and light.
+show_month | false | hide/show text of months.
+start_year | current year | should be smaller than end year.
+end_year | current year | should be bigger than start year.
+calendar_mode | week | can set to week or day mode.
+sticky_date | false | only available for week view and it tracks of your previous selected date position if its true.
+                                    
 
 
 Project example is here for better understanding: 
