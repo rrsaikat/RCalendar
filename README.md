@@ -26,13 +26,13 @@ Have to enable Kotlin and AndroidX, because this project only works into this co
 STEP 1:  Download rcalenderlib_vX.X.X.aar from here:    
 
 <a href="https://github.com/rrsaikat/RCalendar/raw/master/app/libs/rcalenderlib_v2.6.0.aar" title="Download">
-    <img alt="Download" src="https://img.pngio.com/free-icon-download-png-182575-download-icon-download-png-182575-icon-png-download-600_400.jpg" height="80" width="100">
+    <img alt="Download" src="https://img.pngio.com/free-icon-download-png-182575-download-icon-download-png-182575-icon-png-download-600_400.jpg" height="70" width="100">
 </a>
 
 
 STEP 2: Put the downloaded library file into libs folder like this:
 
-<img src="https://blog.rrsaikat.com/wp-content/uploads/2020/05/lib_example.png" height="200" width="220"/>
+<img src="https://blog.rrsaikat.com/wp-content/uploads/2020/05/lib_example.png" height="180" width="220"/>
 
         
    nb: Don't forget to navigate the library into projects build.gradle:
@@ -129,6 +129,12 @@ today() | LocalDate | get today's date
 Attributes | Default | Description
 --- | --- | ---
 month_name_maxlength | two | set the month text length.
+viewbackground | colorDark | set the background of calendar view.
+date_text_color |  | 
+day_text_color|  | 
+month_text_color|  | 
+active_date_background | rounded bg | set the background of selected date only.
+inactive_date_background | transparent | set the background of unselected dates.
 date_start_name | starting day of starting year | customize the starting day of starting year.
 highlight_today_at_startup | false | highlights date of today at startup.
 calendar_style | dark | available styles are dark and light.
