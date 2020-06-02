@@ -148,7 +148,7 @@ Project example is here for better understanding:
 
 Video Sample (Installaion or setup)
 ------------------
-<a href="https://www.youtube.com/watch?v=AN_V5__3VNc" target="_blank"><img src="https://i9.ytimg.com/vi/AN_V5__3VNc/mqdefault.jpg?time=1591080997879&sqp=CMTv1_YF&rs=AOn4CLAI_KxwYDY2LhRfKLQWEn1SxhyQoA"
+<a href="https://www.youtube.com/watch?v=AN_V5__3VNc" target="_blank"><img src="https://i.ytimg.com/vi/AN_V5__3VNc/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAh2kQ-V8awXonTSGD3gEHCnez_3Q"
 alt="" border="0" /></a>
 
 [GO TO Tutorial](https://www.youtube.com/watch?v=AN_V5__3VNc)
