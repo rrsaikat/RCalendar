@@ -168,6 +168,10 @@ alt="" border="0" /></a>
 - Youtube: [Rezwanrehman](http://www.youtube.com/c/Rezwanrehman)
 - Blog: [blog.rrsaikat.com](https://blog.rrsaikat.com)
 
+# Inspired From -
+- [DatePickerTimeline](https://github.com/101Loop/DatePickerTimeline)
+<img src="https://github.com/101Loop/DatePickerTimeline/blob/master/screenshots/datePicker.png?raw=true" alt="DatePicker Logo" />
+  
 
 # Copyright
 Copyright 2020 RRsaikat. All rights reserved.
